@@ -2,6 +2,30 @@
 # go
 
 
+## lang
+
+- data type
+
+- control flow
+
+    - if
+
+    - for
+
+- object
+
+    - struct
+
+    - interface
+
+- concurrent
+
+    - goroutine
+
+    - channel
+
+## go run
+
 
 ```
 go run main.go
