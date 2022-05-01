@@ -39,3 +39,8 @@ go mod init testapp
 
 go mod tidy
 ```
+
+## ref
+
+- start https://go.dev/doc/tutorial/getting-started
+- example https://gobyexample.com/
