@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"testapp/go/testapp/control_flow"
-	"testapp/go/testapp/data_type"
+	"testapp/control_flow"
+	"testapp/data_type"
 )
 
 func main() {
