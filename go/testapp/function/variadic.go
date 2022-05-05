@@ -2,13 +2,15 @@ package function
 
 import "fmt"
 
-func variadic(lst ...int) {
-	for i := 0; i < len(lst); i++ {
-		fmt.Print(lst[i], " ")
-	}
-	fmt.Println()
+func play_variadic() {
+	sum := variadic_add([]int{1, 2, 3, 4, 5}...)
+	fmt.Println("sum=", sum)
 }
 
-func play_variadic() {
-	variadic([]int{1, 2, 3, 4, 5}...)
+func variadic_add(lst ...int) int {
+	sum := 0
+	for _, e := range lst {
+		sum += e
+	}
+	return sum
 }
