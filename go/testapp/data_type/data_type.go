@@ -16,6 +16,7 @@ func Run() {
 	playBool()
 	playNumber()
 	playString()
+	play_slice()
 
 	fmt.Println("const=", const_a, const_b)
 	fmt.Println("var=", var_a, var_b)
