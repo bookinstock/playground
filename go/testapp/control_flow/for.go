@@ -34,4 +34,29 @@ func play_for() {
 		fmt.Println("i=", i, "e=", e)
 	}
 	fmt.Println()
+
+	play_range()
+}
+
+func play_range() {
+	fmt.Println("===range===")
+
+	s := []int{1, 2, 3}
+	m := map[string]int{"a": 1, "b": 2, "c": 3}
+	str := "foobar"
+
+	for i, e := range s {
+		fmt.Println("i=", i, "e=", e)
+	}
+	fmt.Println()
+
+	for k, v := range m {
+		fmt.Println("k=", k, "v=", v)
+	}
+	fmt.Println()
+
+	for i, e := range str {
+		fmt.Println("i=", i, "e=", e)
+	}
+	fmt.Println()
 }

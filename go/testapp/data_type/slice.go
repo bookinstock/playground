@@ -38,3 +38,5 @@ func play_slice() {
 	}
 	fmt.Println("ss=", ss)
 }
+
+// https://go.dev/blog/slices-intro
