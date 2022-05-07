@@ -10,21 +10,21 @@ func play_struct() {
 	fmt.Println("u1=", u1)
 	fmt.Println("u2=", u2)
 
-	r := rect{2, 2}
+	r := Rect{2, 2}
 	fmt.Println("area=", r.area())
 	fmt.Println("perim=", r.perim())
 	fmt.Println("&area=", (&r).area())
 	fmt.Println("&perim=", (&r).perim())
 }
 
-type rect struct {
+type Rect struct {
 	height, width int
 }
 
-func (r rect) area() int {
+func (r Rect) area() int {
 	return r.height * r.width
 }
 
-func (r *rect) perim() int {
+func (r *Rect) perim() int {
 	return 2 * (r.height + r.width)
 }
