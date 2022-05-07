@@ -5,6 +5,7 @@ import (
 	"testapp/control_flow"
 	"testapp/data_type"
 	"testapp/function"
+	"testapp/utils/err"
 )
 
 func main() {
@@ -15,6 +16,8 @@ func main() {
 	control_flow.Run()
 
 	function.Run()
+
+	err.Run()
 }
 
 func foo() {
