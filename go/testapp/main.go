@@ -5,7 +5,7 @@ import (
 	"testapp/control_flow"
 	"testapp/data_type"
 	"testapp/function"
-	"testapp/utils/err"
+	"testapp/object"
 )
 
 func main() {
@@ -17,7 +17,9 @@ func main() {
 
 	function.Run()
 
-	err.Run()
+	// err.Run()
+
+	object.Run()
 }
 
 func foo() {
