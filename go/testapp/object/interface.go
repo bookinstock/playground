@@ -7,6 +7,9 @@ func play_interface() {
 	t2 := T1{2}
 	fmt.Println("t1", getValue(t1))
 	fmt.Println("t2", getValue(t2))
+
+	var t T = t1
+	fmt.Println("t=", getValue(t))
 }
 
 type T1 struct {
