@@ -6,10 +6,14 @@ func play_embed() {
 	fmt.Println("===embed===")
 	a := A{Base: Base{V: 1, II: F1{f: 2}}, VA: 3}
 	b := B{Base: Base{V: 1, II: F2{f: 4}}, VB: 5}
+
 	fmt.Printf("a=%#v\n", a)
 	fmt.Printf("b=%#v\n", b)
 	fmt.Println("a v=", a.v())
 	fmt.Println("b v=", b.v())
+
+	var i IV = &a
+	fmt.Println("iv=", i.v())
 }
 
 type Base struct {
@@ -60,4 +64,8 @@ func (f F1) foo() int {
 
 func (f F2) foo() int {
 	return f.f
+}
+
+type IV interface {
+	v() int
 }
