@@ -17,6 +17,18 @@ func play_struct() {
 	fmt.Println("&perim=", (&r).perim())
 }
 
+type User struct {
+	name string
+	age  int
+}
+
+func NewUser(name string, age int) *User {
+	return &User{
+		name: name,
+		age:  age,
+	}
+}
+
 type Rect struct {
 	height, width int
 }
