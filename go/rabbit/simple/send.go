@@ -29,8 +29,9 @@ func send() {
 
 	failOnError(err, "Failed to declare a queue")
 
+	i := 1
 	for {
-		msg := "foo"
+		msg := fmt.Sprintf("foo-%d", i)
 		err = ch.Publish(
 			"",     // exchange
 			q.Name, // routing key
@@ -45,5 +46,6 @@ func send() {
 		fmt.Printf("send msg=%s\n", msg)
 
 		time.Sleep(time.Second)
+		i += 1
 	}
 }
