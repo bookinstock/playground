@@ -6,7 +6,6 @@
 
 ## Run
 
-
 Run Producer: `go run main.go -r p simple`
 
 Run Consumer: `go run main.go -r c simple`

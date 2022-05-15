@@ -2,6 +2,7 @@ package simple
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/streadway/amqp"
 )
@@ -28,15 +29,21 @@ func send() {
 
 	failOnError(err, "Failed to declare a queue")
 
-	body := "Hello World!"
-	err = ch.Publish(
-		"",     // exchange
-		q.Name, // routing key
-		false,  // mandatory
-		false,  // immediate
-		amqp.Publishing{
-			ContentType: "text/plain",
-			Body:        []byte(body),
-		})
-	failOnError(err, "Failed to publish a message")
+	for {
+		msg := "foo"
+		err = ch.Publish(
+			"",     // exchange
+			q.Name, // routing key
+			false,  // mandatory
+			false,  // immediate
+			amqp.Publishing{
+				ContentType: "text/plain",
+				Body:        []byte(msg),
+			})
+		failOnError(err, "Failed to publish a message")
+
+		fmt.Printf("send msg=%s\n", msg)
+
+		time.Sleep(time.Second)
+	}
 }
