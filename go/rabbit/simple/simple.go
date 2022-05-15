@@ -2,16 +2,16 @@ package simple
 
 import (
 	"fmt"
-	"rabbit/cmd"
+	"rabbit/role"
 
 	"golang.org/x/sync/errgroup"
 )
 
 func Run() {
 
-	if cmd.IsProducer() {
+	if role.IsProducer() {
 		send()
-	} else if cmd.IsConsumer() {
+	} else if role.IsConsumer() {
 		receive()
 	} else {
 		g := new(errgroup.Group)

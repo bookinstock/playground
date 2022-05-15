@@ -1,27 +1,16 @@
 package cmd
 
-import "github.com/urfave/cli"
+import (
+	"rabbit/role"
 
-const (
-	PRODUCER = "p"
-	CONSUMER = "c"
+	"github.com/urfave/cli"
 )
-
-var role string
 
 var Flags = []cli.Flag{
 	cli.StringFlag{
 		Name:        "r",
-		Value:       CONSUMER,
+		Value:       role.ALL,
 		Usage:       "role",
-		Destination: &role,
+		Destination: &role.Role,
 	},
-}
-
-func IsProducer() bool {
-	return role == PRODUCER
-}
-
-func IsConsumer() bool {
-	return role == CONSUMER
 }
