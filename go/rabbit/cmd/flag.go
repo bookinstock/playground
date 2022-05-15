@@ -2,13 +2,26 @@ package cmd
 
 import "github.com/urfave/cli"
 
-var ConfigPath string
+const (
+	PRODUCER = "p"
+	CONSUMER = "c"
+)
+
+var role string
 
 var Flags = []cli.Flag{
 	cli.StringFlag{
-		Name:        "c",
-		Value:       "test",
-		Usage:       "config path",
-		Destination: &ConfigPath,
+		Name:        "r",
+		Value:       CONSUMER,
+		Usage:       "role",
+		Destination: &role,
 	},
+}
+
+func IsProducer() bool {
+	return role == PRODUCER
+}
+
+func IsConsumer() bool {
+	return role == CONSUMER
 }
