@@ -28,4 +28,6 @@ func Run() {
 	playTimer()
 
 	playTicker()
+
+	playWorkerPool()
 }
