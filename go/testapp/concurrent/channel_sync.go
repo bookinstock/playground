@@ -12,7 +12,7 @@ waiting for multiple goroutines to finish (WaitGroup)
 `
 
 func playChannelSync() {
-	fmt.Println("===playChannelSync===")
+	fmt.Println("===channel sync===")
 	fmt.Println(introChannelSync)
 
 	queue := make(chan int)

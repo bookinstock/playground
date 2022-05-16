@@ -12,4 +12,10 @@ func Run() {
 	playChannelBuffer()
 
 	playChannelSync()
+
+	playChannelDirection()
+
+	playChannelSelect()
+
+	playTimeout()
 }
