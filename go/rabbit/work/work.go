@@ -1,4 +1,4 @@
-package simple
+package work
 
 import (
 	"fmt"

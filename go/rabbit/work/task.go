@@ -1,4 +1,4 @@
-package simple
+package work
 
 import (
 	"fmt"
@@ -37,16 +37,17 @@ func publish() {
 			"",     // exchange
 			q.Name, // routing key
 			false,  // mandatory
-			false,  // immediate
+			false,
 			amqp.Publishing{
-				ContentType: "text/plain",
-				Body:        []byte(msg),
+				DeliveryMode: amqp.Persistent,
+				ContentType:  "text/plain",
+				Body:         []byte(msg),
 			})
 		utils.FailOnError(err, "Failed to publish a message")
 
-		fmt.Printf("send msg=%s\n", msg)
+		// fmt.Printf("publish msg=%s\n", msg)
 
-		time.Sleep(time.Second)
+		time.Sleep(time.Millisecond * 200)
 		i += 1
 	}
 }
