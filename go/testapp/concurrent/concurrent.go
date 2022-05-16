@@ -10,4 +10,6 @@ func Run() {
 	playChannel()
 
 	playChannelBuffer()
+
+	playChannelSync()
 }
