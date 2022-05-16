@@ -13,13 +13,13 @@ func playChannel() {
 
 	fmt.Println(introChannel)
 
-	pipe := make(chan string)
+	queue := make(chan string)
 
 	go func() {
-		pipe <- "ping"
+		queue <- "ping"
 	}()
 
-	msg := <-pipe
+	msg := <-queue
 
 	fmt.Println("msg=", msg)
 }

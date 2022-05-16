@@ -13,4 +13,13 @@ func playChannelBuffer() {
 	fmt.Println("===channel buffer===")
 	fmt.Println(introChannelBuffer)
 
+	queue := make(chan int, 3)
+
+	queue <- 1
+	queue <- 2
+	queue <- 3
+
+	fmt.Println(<-queue)
+	fmt.Println(<-queue)
+	fmt.Println(<-queue)
 }
