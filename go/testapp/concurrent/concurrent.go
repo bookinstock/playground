@@ -20,4 +20,8 @@ func Run() {
 	playTimeout()
 
 	playChannelNonBlocking()
+
+	playChannelClose()
+
+	playRange()
 }
