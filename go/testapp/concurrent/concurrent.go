@@ -30,4 +30,6 @@ func Run() {
 	playTicker()
 
 	playWorkerPool()
+
+	playWaitGroup()
 }
