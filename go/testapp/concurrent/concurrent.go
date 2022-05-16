@@ -24,4 +24,8 @@ func Run() {
 	playChannelClose()
 
 	playRange()
+
+	playTimer()
+
+	playTicker()
 }
