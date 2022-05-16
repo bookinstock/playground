@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"testapp/concurrent"
 	"testapp/control_flow"
 	"testapp/data_type"
 	"testapp/function"
@@ -20,6 +21,8 @@ func main() {
 	// err.Run()
 
 	object.Run()
+
+	concurrent.Run()
 }
 
 func foo() {
