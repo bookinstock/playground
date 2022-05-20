@@ -1,6 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
+// Vulnerability
+// Let's say that contract A calls contract B.
+// Reentracy exploit allows B to call back into A before A finishes execution.
+
 /*
 EtherStore is a contract where you can deposit and withdraw ETH.
 This contract is vulnerable to re-entrancy attack.
@@ -29,25 +33,15 @@ Here is how the functions were called
 */
 
 
-contract ReEntrancyGuard {
-    bool internal locked;
 
-    modifier noReentrant() {
-        require(!locked, "No re-entrancy");
-        locked = true;
-        _;
-        locked = false;
-    }
-}
-
-contract EtherStore is ReEntrancyGuard {
+contract EtherStore {
     mapping(address => uint) public balances;
 
     function deposit() public payable {
         balances[msg.sender] += msg.value;
     }
 
-    function withdraw() public noReentrant {
+    function withdraw() public {
         uint bal = balances[msg.sender];
         require(bal > 0);
 
@@ -89,3 +83,18 @@ contract Attack {
     }
 }
 
+// Preventative Techniques
+// - Ensure all state changes happen before calling external contracts
+// - Use function modifiers that prevent re-entrancy
+
+
+contract ReEntrancyGuard {
+    bool internal locked;
+
+    modifier noReentrant() {
+        require(!locked, "No re-entrancy");
+        locked = true;
+        _;
+        locked = false;
+    }
+}
