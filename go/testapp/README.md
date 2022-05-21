@@ -4,25 +4,36 @@
 
 ## lang
 
-- data type
+### data type
+- bool
+- int
+- float
+- string
+- pointer
+- slice
+- map
 
-- control flow
+### control flow
+- if else
+- switch case
+	- value
+	- condition
+	- type
+- for
+	- range
 
-    - if
+### object
+- type
+	- method
+- interface
+- struct
+	- embedding
+		- type
 
-    - for
+### goroutine
+- goroutine
+- channel
 
-- object
-
-    - struct
-
-    - interface
-
-- concurrent
-
-    - goroutine
-
-    - channel
 
 ## go run
 
