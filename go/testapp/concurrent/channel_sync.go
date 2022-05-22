@@ -8,8 +8,7 @@ import (
 const introChannelSync = `
 use channels to synchronize execution across goroutines (single)
 using a blocking receive to wait for a goroutine to finish.
-waiting for multiple goroutines to finish (WaitGroup)
-`
+waiting for multiple goroutines to finish (WaitGroup)`
 
 func playChannelSync() {
 	fmt.Println("===channel sync===")

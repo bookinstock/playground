@@ -8,8 +8,7 @@ import (
 const introNonBlockingChannel = `
 Basic sends and receives on channels are blocking.
 use select with a default clause to implement
-non-blocking sends, receives, and even non-blocking multi-way selects.
-`
+non-blocking sends, receives, and even non-blocking multi-way selects.`
 
 func playChannelNonBlocking() {
 	fmt.Println("===non-blocking channel===")

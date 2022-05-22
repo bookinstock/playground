@@ -7,8 +7,7 @@ import (
 
 const introTimeout = `
 Timeouts are important for programs that connect to external resources
-or that otherwise need to bound execution time.
-`
+or that otherwise need to bound execution time.`
 
 func playTimeout() {
 	fmt.Println("===timeout===")
