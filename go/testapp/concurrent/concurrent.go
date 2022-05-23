@@ -32,4 +32,6 @@ func Run() {
 	playWorkerPool()
 
 	playWaitGroup()
+
+	playRateLimit()
 }
