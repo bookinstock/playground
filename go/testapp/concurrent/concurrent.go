@@ -36,4 +36,6 @@ func Run() {
 	playRateLimit()
 
 	playAtomic()
+
+	playMutex()
 }
