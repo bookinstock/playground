@@ -34,4 +34,6 @@ func Run() {
 	playWaitGroup()
 
 	playRateLimit()
+
+	playAtomic()
 }
